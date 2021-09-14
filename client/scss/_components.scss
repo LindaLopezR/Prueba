@@ -1,0 +1,143 @@
+@import './variables';
+
+// Navbar
+nav.fixed-top {
+  .dropdown-toggle {
+    color: #fff;
+    &:after {
+      color: $light-color;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(242, 179, 185, 0.25%);
+    }
+  }
+  .nav-link {
+    color: gray;
+    &:hover {
+      background-color: $light-color;
+    }
+  }
+  &:last-child.nav-link {
+    color: $main-color;
+  }
+}
+
+// Loading
+.loading-view {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  #loader {
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $main-color;
+    @include animation(spin 2s linear infinite);
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid transparent;
+    }
+
+    &::before {
+      @include circle(5px);
+      border-top-color: $light-color;
+      @include animation(spin 3s linear infinite);
+    }
+    
+    &::after {
+      @include circle(12px);
+      border-top-color: $main-color-dark;
+      @include animation(spin 1.5s linear infinite);
+    }
+  }
+}
+
+// DROP AND DRAG
+.dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border .24s ease-in-out;
+
+  &:focus {
+    border-color: $light-color;
+  }
+}
+
+.thumbsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.thumb {
+  display: inline-flex;
+  border-radius: 2px;
+  border: 2px solid #eaeaea;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.thumbInner {
+  display: flex;
+  min-width: 0;
+  overflow: hidden
+}
+.img-drag {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+  .input-calendar {
+    width: 100%;
+  }
+}
+
+table.cart-view td {
+  vertical-align: middle;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@keyframes spin {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}

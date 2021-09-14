@@ -1,0 +1,73 @@
+
+
+$warning-color: #D9D793;
+$danger-color: #C9252C;
+$success-color: #5AA66B;
+$success-color-dark: #4d8659;
+
+// header
+$main-color: #C9252C;
+$main-color-dark: #591C1C;
+$secondary-color: #C8B682;
+$light-color: #DAD0C2;
+
+$teal-color: #00b5ad;
+$teal-color-dark: #009c95;
+$blue-color: #25AAE1;
+$blue-color-dark: #2C89AC;
+$blue-dark: #135071;
+$background-color-general: #E6E7E8;
+
+// Font
+@font-face {
+  src: url("/fonts/Geometric-Lite.ttf");
+  font-family: fontTitles;
+}
+
+@font-face {
+  src: url("/fonts/Garamond.ttf");
+  font-family: fontGeneral;
+}
+
+
+// Animations
+@mixin transform($translate) {
+  -webkit-transform: $translate;
+  -moz-transform: $translate;
+  -ms-transform: $translate;
+  -o-transform: $translate;
+  transform: $translate;
+}
+
+@mixin transition($transform, $shadow) {
+  -webkit-transition: $transform, $shadow;
+  -moz-transition: $transform, $shadow;
+  transition: $transform, $shadow;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  animation: $animation;
+}
+
+@mixin circle($size) {
+  top: $size;
+  left: $size;
+  right: $size;
+  bottom: $size;
+}
+
+@mixin burble($left, $width, $height, $animation) {
+  left: $left;
+  width: $width;
+  height: $height;
+  animation-delay: $animation;
+}
+
+// Utilities
+@mixin centerItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Rewards",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.6",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.2",
+    "create-react-class": "^15.7.0",
+    "ddp-client": "^0.1.2",
+    "highcharts": "^9.1.2",
+    "highcharts-react-official": "^3.0.0",
+    "jquery": "^3.6.0",
+    "meteor-node-stubs": "^1.0.3",
+    "moment-timezone": "^0.5.33",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-paginator": "^2.1.2",
+    "react-color": "^2.19.3",
+    "react-datepicker": "^4.1.1",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.3.4",
+    "react-hook-form": "^7.11.0",
+    "react-router-dom": "^5.2.0",
+    "react-slick": "^0.28.1",
+    "react-step-builder": "^2.0.10",
+    "slick-carousel": "^1.8.1",
+    "xlsx": "^0.17.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
